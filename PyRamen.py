@@ -30,7 +30,12 @@ with open(menu_filepath, newline="") as menudata:
 
 
 # @TODO: Read in the sales data into the sales list
+with open(sales_filepath, newline="") as salesdata:
+    csvreader_sales = csv.reader(salesdata, delimiter=",")
+    csvheader_sales = next(csvreader_sales)
 
+    for x in csvreader_sales:
+        sales.append(x)
 
 
 
