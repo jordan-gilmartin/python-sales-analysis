@@ -14,7 +14,12 @@ menu = []
 sales = []
 
 # @TODO: Read in the menu data into the menu list
+with open(menu_filepath, newline="") as menudata:
+    csvreader = csv.reader(menudata, delimiter=",")
+    csvheader = next(csvreader)
 
+    for x in csvreader:
+        menu.append(x)
 
 
 
