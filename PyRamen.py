@@ -119,6 +119,7 @@ for x in sales:
 
 
 # @TODO: Print total number of records in sales data
+print(row_count)
 
 
 
