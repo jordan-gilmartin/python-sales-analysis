@@ -77,15 +77,24 @@ for x in sales:
 
 
     # @TODO: For every row in our sales data, loop over the menu records to determine a match
+    for row in menu:
+
+        
+
+        
 
 
         # Item,Category,Description,Price,Cost
         # @TODO: Initialize menu data variables
+        Item = row[0]
+        Price = float(row[3])
+        Cost = int(row[4])
 
 
 
 
         # @TODO: Calculate profit of each item in the menu data
+        Profit = Price - Cost
 
 
         # @TODO: If the item value in our sales data is equal to the any of the items in the menu, then begin tracking metrics for that item
