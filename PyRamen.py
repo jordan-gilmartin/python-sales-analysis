@@ -114,6 +114,7 @@ for x in sales:
 
 
     # @TODO: Increment the row counter by 1
+    row_count += 1
     
 
 
