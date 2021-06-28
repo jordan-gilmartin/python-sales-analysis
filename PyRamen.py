@@ -64,6 +64,10 @@ for x in sales:
     # @TODO:
     # If the item value not in the report, add it as a new entry with initialized metrics
     # Naming convention allows the keys to be ordered in logical fashion, count, revenue, cost, profit
+    if Menu_Item not in report.keys():
+        report[Menu_Item] = {"01-count": 0, "02-revenue": 0, "03-cogs": 0, "04-profit": 0}
+
+    
 
 
 
