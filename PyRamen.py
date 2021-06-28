@@ -98,26 +98,22 @@ for x in sales:
 
 
         # @TODO: If the item value in our sales data is equal to the any of the items in the menu, then begin tracking metrics for that item
+        if Menu_Item == Item:
+            report[Menu_Item]["01-count"] += Quantity
+            report[Menu_Item]["02-revenue"] += Price * Quantity
+            report[Menu_Item]["03-cogs"] += Cost * Quantity
+            report[Menu_Item]["04-profit"] += Profit * Quantity
 
-
-            # @TODO: Print out matching menu data
-
-
-
-
-
-
-            # @TODO: Cumulatively add up the metrics for each item key
-
-
-
+            
 
 
         # @TODO: Else, the sales item does not equal any fo the item in the menu data, therefore no match
+        
 
 
 
     # @TODO: Increment the row counter by 1
+    
 
 
 # @TODO: Print total number of records in sales data
@@ -125,4 +121,6 @@ for x in sales:
 
 
 
+
 # @TODO: Write out report to a text file (won't appear on the command line output)
+
