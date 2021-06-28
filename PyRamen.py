@@ -52,13 +52,14 @@ report = {}
 row_count = 0
 
 # @TODO: Loop over every row in the sales list object
-
+for x in sales:
 
 
 
     # Line_Item_ID,Date,Credit_Card_Number,Quantity,Menu_Item
     # @TODO: Initialize sales data variables
-
+    Quantity = int(x[3])
+    Menu_Item = x[4]
 
     # @TODO:
     # If the item value not in the report, add it as a new entry with initialized metrics
