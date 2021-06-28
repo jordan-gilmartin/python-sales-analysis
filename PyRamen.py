@@ -126,4 +126,9 @@ print(row_count)
 
 
 # @TODO: Write out report to a text file (won't appear on the command line output)
+path = Path("sales_analysis.txt")
+
+with open(path, "w") as textfile:
+    for key,value in report.items():
+        textfile.write(f"{key} {value} \n")
 
