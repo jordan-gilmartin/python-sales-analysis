@@ -108,7 +108,8 @@ for x in sales:
 
 
         # @TODO: Else, the sales item does not equal any fo the item in the menu data, therefore no match
-        
+        else:
+            print(f"{Menu_Item} does not equal {Item}! NO MATCH!")
 
 
 
