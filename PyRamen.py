@@ -23,12 +23,6 @@ with open(menu_filepath, newline="") as menudata:
 
 
 
-
-
-
-
-
-
 # @TODO: Read in the sales data into the sales list
 with open(sales_filepath, newline="") as salesdata:
     csvreader_sales = csv.reader(salesdata, delimiter=",")
@@ -36,12 +30,6 @@ with open(sales_filepath, newline="") as salesdata:
 
     for x in csvreader_sales:
         sales.append(x)
-
-
-
-
-
-
 
 
 
@@ -67,21 +55,11 @@ for x in sales:
     if Menu_Item not in report.keys():
         report[Menu_Item] = {"01-count": 0, "02-revenue": 0, "03-cogs": 0, "04-profit": 0}
 
-    
-
-
-
-
-
 
 
 
     # @TODO: For every row in our sales data, loop over the menu records to determine a match
-    for row in menu:
-
-        
-
-        
+    for row in menu:        
 
 
         # Item,Category,Description,Price,Cost
@@ -89,7 +67,6 @@ for x in sales:
         Item = row[0]
         Price = float(row[3])
         Cost = int(row[4])
-
 
 
 
@@ -102,9 +79,7 @@ for x in sales:
             report[Menu_Item]["01-count"] += Quantity
             report[Menu_Item]["02-revenue"] += Price * Quantity
             report[Menu_Item]["03-cogs"] += Cost * Quantity
-            report[Menu_Item]["04-profit"] += Profit * Quantity
-
-            
+            report[Menu_Item]["04-profit"] += Profit * Quantity            
 
 
         # @TODO: Else, the sales item does not equal any fo the item in the menu data, therefore no match
@@ -120,8 +95,6 @@ for x in sales:
 
 # @TODO: Print total number of records in sales data
 print(row_count)
-
-
 
 
 
